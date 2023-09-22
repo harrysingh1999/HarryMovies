@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", serif;
+}
+
+.headingCSS{
+  color: rgb(210, 205, 205);
+  font-size: clamp(20px, 5vw, 30px)
+}
+
+.hideElement {
+  z-index: -100;
+  display: none;
+}
+
+.hideLoginContainer {
+  z-index: -100;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.showLoginContainer {
+  z-index: 102;
+  display: inline-block;
+  backdrop-filter: blur(8px);
+}
+
+.loginFormCSS {
+  border: 1px solid rgb(199, 197, 197);
+  padding: 20px 15px 40px 15px;
+  z-index: 102;
+  background-color: rgb(131, 36, 18);
+  color: white;
+  position: absolute;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.hideSignupContainer {
+  z-index: -100;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.showSignupContainer {
+  z-index: 102;
+  display: inline-block;
+  backdrop-filter: blur(8px);
+}
+
+.signupFormCSS {
+  border: 1px solid rgb(209, 208, 208);
+  padding: 20px 15px 30px 15px;
+  z-index: 102; 
+  background-color: rgb(131, 36, 18);
+  color: white;
+  position: absolute;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+#mainImageContainer{
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  #mainImageContainer{
+    display: inline;
+  };
+}
+
+.movieImage {
+  width: 90%;
+  float: right;
+  border-radius: 20px;
+  border: 2px solid #006c80;
+}
+
+@media screen and (min-width: 768px) {
+  .img {
+    width: 320px !important;
+  }
+}
+
+#movieOverview{
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #movieOverview{
+    width: 60%;
+  };
+}
+
+.similarMovieImage {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.bottomRadius {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media (max-width: 500px) {
+  .owl-width {
+    width: 80% !important;
+  }
+}
+
+.owl-theme .owl-nav {
+  font-size: 30px;
+  color: rgb(255, 246, 246);
+}
+
+.owl-theme .owl-nav .owl-prev {
+  position: absolute;
+  left: 5px;
+  bottom: 220px;
+  background-color: #0b0b0b !important;
+}
+
+.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  right: 12px;
+  bottom: 220px;
+  background-color: #212221 !important; 
+}
+
+.similar_cards {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.similar_cards img {
+  transition: cubic-bezier(0.59, -0.18, 0.38, 1.17)  0.40s;  
+}
+
+.similar_cards img:hover {
+    transform:scale(1.08);
+    border: 3px solid #006c80;  
+}
+
+.creditImage{
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#castOwlData{
+  font-size: clamp(12px, 4vw, 16px);
+  width: 150px;
+}
+
+#crewOwlData{
+  font-size: clamp(12px, 4vw, 16px);
+  width: 150px;
+}

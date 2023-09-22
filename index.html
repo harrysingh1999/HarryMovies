@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+<link rel="shortcut icon" type="x-icon" href="./Images/tab-icon.webp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./MainStyle.css" />
+</head>
+
+<body>      
+
+  <section id="loader">
+    <div class="rocket-loader">
+      <div class="rocket">
+        <div class="rocket-extras"></div>
+        <div class="jet"></div>
+      </div>
+    </div>
+   </section>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="http://127.0.0.1:5501/" class="navbar-brand me-2 me-lg-5 py-0 px-2 d-none d-md-block" id="logo"><strong class="fs-3">H</strong>
+        <i class="fa-solid fa-clapperboard" style="color: #dadde1;"></i> rry Movies</a> 
+
+      <a href="http://127.0.0.1:5501/" class="navbar-brand d-block d-md-none px-1 py-0" id="logo">
+        <b class="fs-3">HM</b></a>
+
+      <form class="d-flex flex-column me-2" role="search" style="position: relative" ;>
+        <input id="mainInput" class="form-control ps-2 ps-lg-3 rounded-pill color" type="search"
+          placeholder="Search movies..." aria-label="Search" autocomplete="off">
+          <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="color: #292828; position: absolute;
+          right: 15px;
+          top: 9px;
+          font-size: 20px;"></i>
+        <div id="resultDiv" class="hideElement" style="position: absolute; top: 39px; width: 100%;"></div>
+      </form>
+      <button class="navbar-toggler px-1 py-0 bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0 p-2" id="navbarTogglerDemo02">
+        <button id="login" type="button" class="btn mb-3 mb-lg-0 me-1 me-lg-4 d-lg-inline d-inline-block">
+          <i class="fa-solid fa-right-to-bracket" style="color: #e3e3e3;"></i>
+          <p class="d-inline d-lg-none text-white ms-2">Login</p>
+        </button> 
+        <button id="signup" type="button" class="btn mb-3 mb-lg-0 d-inline-block">
+          <i class="fa-solid fa-user-plus" style="color: #f4f5f5;"></i>
+          <p class="d-inline d-lg-none text-white ms-1">Signup</p>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="loginContainer" class="hideElement d-flex justify-content-center align-items-center">
+    <form class="hideElement" id="loginForm">
+      <div class="container">
+        <span id="closingButton" style="position: absolute; right: 50px;">
+          &#10006
+        </span>
+        <h3 class="text-center fw-bold my-3">Sign in</h3>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" size="40" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-warning">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group mb-2">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Log in</button>
+
+        <hr class="my-4">
+
+        <div class="text-center">
+          <a class="btn btn-lg btn-danger mb-2" style="padding: 10px 16px; font-size: 16px;
+          " type="submit"
+            href="https://accounts.google.com/v3/signin/identifier?hl=en-GB&ifkv=AXo7B7WunV5GRpQSNAHmY95ahFoS6EfuN95qhsBL2c70iazP74Q58HRZrOpvUI56GM9ktHcA0FqlzQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S923564321%3A1692001080971652"
+            target="_signin">
+            <i class="fab fa-google me-2"></i></i> Sign in with Google
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="btn btn-lg btn-block btn-primary" style="padding: 10px;  font-size: 16px" type="submit"
+            href="https://www.facebook.com/login/" target="_signin">
+            <i class="fa-brands fa-facebook me-2"></i></i>Sign in with facebook 
+          </a>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section id="signupContainer" class="hideElement d-flex justify-content-center align-items-center">
+    <form class="hideElement" id="signupForm">
+      <div class="container">
+        <span id="signupClosingButton" style="position: absolute; right: 50px;">
+          &#10006
+        </span>
+        <h3 class="text-center fw-bold my-3">Sign up</h3>
+        <div class="form-group mb-2">
+          <label for="exampleInputName">Name</label>
+          <input type="email" class="form-control" size="40" id="exampleInputName" aria-describedby="emailHelp"
+            placeholder="Enter your name">
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="exampleInputMobile">Mobile No.</label>
+          <input type="email" class="form-control" size="40" id="exampleInputMobile" aria-describedby="emailHelp"
+            placeholder="Enter your mobile no.">
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="exampleInputEmail2">Email address</label>
+          <input type="email" class="form-control" size="40" id="exampleInputEmail2" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-warning">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group mb-2">
+          <label for="exampleInputPassword2"> Set Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Create Password">
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="exampleInputPassword3"> Confirm new Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword3"
+            placeholder="Should match with your set password">
+        </div>
+
+        <div class="form-group form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="exampleCheck2">
+          <label class="form-check-label" for="exampleCheck2">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+        <hr class="my-4">
+        <div class="text-center">
+          <a class="btn btn-lg btn-danger mb-2" style="padding: 10px 16px; font-size: 16px" type="submit"
+            href="https://accounts.google.com/v3/signin/identifier?hl=en-GB&ifkv=AXo7B7WunV5GRpQSNAHmY95ahFoS6EfuN95qhsBL2c70iazP74Q58HRZrOpvUI56GM9ktHcA0FqlzQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S923564321%3A1692001080971652"
+            target="_signin">
+            <i class="fab fa-google me-2"></i></i> Sign up with Google
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="btn btn-lg btn-block btn-primary" style="padding: 10px; font-size: 16px" type="submit"
+            href="https://www.facebook.com/login/" target="_signin">
+            <i class="fa-brands fa-facebook me-2"></i></i>Sign up with facebook
+          </a>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section id="topTrendingMovies" class="color p-0 mt-3 mt-md-0 d-none d-md-block">
+    <div id="carousel-top-3" class="row d-flex owl-carousel owl-theme mx-0 py-4"></div>
+    </div>
+  </section>  
+
+  <section class="container mt-2 mt-md-3 mb-5 pe-5 pe-md-3 d-flex flex-column align-items-center" id="trendingMovies">
+    <h2 class="mt-0 mt-md-4 headingCSS">Trending Movies</h2>
+    <div class="row text-center" id="trendingMovieDetails">
+      <div class="row d-flex flex-wrap"></div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <footer class="d-flex justify-content-evenly align-items-center bg-dark">
+      <p class="text-white my-4">&#169 2023 Harry Movies- All rights reserved.</p>
+      <div id="socialMedia">        
+        <a href="https://www.instagram.com/" target="_insta"><i class="fa-brands fa-instagram" style="color: #e60f8c;"></i></a> 
+        <a href="https://www.linkedin.com/login" target="_linkedin" class="mx-0 mx-md-2"><i class="fa-brands fa-linkedin" style="color: #0650d0;"></i></a> 
+        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&ec=65620&hl=en-GB&ifkv=AYZoVheNYlRXS7i7O1L7L4J7ytnyhH5nKvA0ZxeEI-_bI3I17H-uPtgTdLIACC-UP5txwLtqUxwbNA&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-99994217%3A1694613317446558&theme=glif" target="_youtube"><i class="fa-brands fa-youtube" style="color: #dd2d0e;"></i></a> 
+        <a class="ms-0 ms-md-2" href="https://www.facebook.com/" target="_facebook"><i class="fa-brands fa-facebook" style="color: #5c92f0;"></i></a> 
+      </div>
+      </footer>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="./Main.js"></script>
+  <script src="./owlCarousel.js"></script>
+
+  </script>
+</body>
+
+</html>
