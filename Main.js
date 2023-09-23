@@ -145,7 +145,7 @@ const makeTrendingMovies = (trendingDetails) => {
   let top3Trending = trendingDetails.slice(0, 3);
   top3Trending.forEach((top) => {
     let topTrending = `<div class="col item d-flex justify-content-center">
-      <a href="/movieDetails.html?movie_id=${top.id}">
+      <a href="./movieDetails.html?movie_id=${top.id}">
       <img src="https://image.tmdb.org/t/p/original${
         top.backdrop_path
       }" class="topTrendingImages border-rounded">
@@ -171,7 +171,7 @@ const makeTrendingMovies = (trendingDetails) => {
     let myTrendingMovies = `
         <div class="trending_card_container text-center col-6 col-md-4 col-xl-3 p-0" style="border-radius:15px;">
     <div style="width: 90%;" class="ms-4">
-    <a class="trending_cards" href="/movieDetails.html?movie_id=${similar.id}">
+    <a class="trending_cards" href="./movieDetails.html?movie_id=${similar.id}">
     <img src="https://image.tmdb.org/t/p/original${
       similar.poster_path
     }" class="trendingMovieImages mt-3 mb-0">

@@ -408,7 +408,7 @@ const makeTrendingMovies = (trendingDetails) => {
     let myTrending =  `
           <div class="text-center item similar_card_container" style="border-radius:15px">
           <div style="width: 90%;">
-            <a href="/movieDetails.html?movie_id=${
+            <a href="./movieDetails.html?movie_id=${
               top.id
             }" class="similar_cards">
               <img src="https://image.tmdb.org/t/p/original${
@@ -445,7 +445,7 @@ const makeSimilarMovies = () => {
     let mySimilarMovies = `
           <div class="text-center item similar_card_container" style="border-radius:15px">
           <div style="width: 90%;">
-            <a href="/movieDetails.html?movie_id=${
+            <a href="./movieDetails.html?movie_id=${
               similar.id
             }" class="similar_cards">
               <img src="https://image.tmdb.org/t/p/original${
