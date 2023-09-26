@@ -32,7 +32,7 @@ function castOwl() {
         dots: true,
         autoplay: false,
         autoplayTimeout: 3000,
-        smartSpeed: 600,
+        smartSpeed: 900,
         autoplayHoverPause: true,
         responsive: {
          0: {
@@ -65,7 +65,7 @@ function crewOwl() {
         dots: true,
         autoplay: false,
         autoplayTimeout: 3000,
-        smartSpeed: 600,
+        smartSpeed: 900,
         autoplayHoverPause: true,
         responsive: {
           0: {
@@ -99,7 +99,7 @@ function similarMoviesOwl() {
         dots: false,
         autoplay: true,
         autoplayTimeout: 3000,
-        smartSpeed: 600,
+        smartSpeed: 900,
         autoplayHoverPause: true,
         responsive: {
           0: {

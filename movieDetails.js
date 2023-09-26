@@ -207,7 +207,7 @@ async function makeMoviesData() {
     similarMovieParams
   );
   loader.classList.add("hideElement");
-  if (similarMovieData.data.total_results !== 0) {
+  if (similarMovieData.data.total_results > 4 ) {
     similarMoviesData = similarMovieData.data.results;
     makeSimilarMovies();
   } else {

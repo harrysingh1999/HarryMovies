@@ -148,13 +148,13 @@ const makeTrendingMovies = (trendingDetails) => {
       <a href="./movieDetails.html?movie_id=${top.id}">
       <img src="https://image.tmdb.org/t/p/original${
         top.backdrop_path
-      }" class="topTrendingImages border-rounded">
-      <div class="text-white imgText">
-      <p class= "d-none d-md-block mb-0 mt-2" id="imgTextHeading">${
+      }" class="rounded-5">
+      <div class="text-white imgText rounded-5" id="myImgText">
+      <p class= "mb-0 mt-2" id="imgTextHeading">${
         top.title
       }</p> 
-      <p class="my-1 my-lg-3 d-none d-md-block imgTextOver">${top.overview}</p>
-      <p class="mt-2 d-none d-md-block imgTextOver">IMDb: ${top.vote_average.toFixed(
+      <p class="my-1 my-lg-3 imgTextOver">${top.overview}</p>
+      <p class="mt-2 imgTextOver">IMDb: ${top.vote_average.toFixed(
         1
       )}/10</p>  
       </div> 

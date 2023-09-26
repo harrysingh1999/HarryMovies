@@ -275,15 +275,15 @@ h3, #imgTextHeading {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
   #mainInput{
-    width: 350px !important;
+    width: 400px !important;
   }
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px){
+@media screen and (min-width: 375px) and (max-width: 767px){
   #mainInput{
-    width: 270px !important;
+    width: 240px !important;
   }
 }
 
@@ -347,8 +347,18 @@ background-color: rgb(206, 206, 201);
   border-radius: 15px;
 }
 
-.topTrendingImages {
+/* .topTrendingImages {
   border-radius: 10px;
+} */
+
+@media screen and (min-width:1024px){
+  #myImgText{
+    visibility: visible !important;
+  }
+}
+
+#myImgText{
+  visibility: hidden;
 }
 
 .imgText {
