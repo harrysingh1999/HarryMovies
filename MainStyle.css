@@ -326,6 +326,7 @@ background-color: rgb(206, 206, 201);
   color: rgb(181, 173, 173)
 }
 
+
 .loginContainer, .signupContainer {
   z-index: 101;
   display: inline-block;
@@ -335,6 +336,32 @@ background-color: rgb(206, 206, 201);
   position: fixed;
   top: 0;
 }
+
+@media screen  and (max-width: 374px){
+  #loginForm, #signupForm{
+    width: 90% !important;
+    font-size: 14px;
+  }
+}
+@media screen  and (min-width:375px) and (max-width:765px){
+  #loginForm, #signupForm{
+    width: 80% !important;
+    font-size: 14px;
+  }
+}
+
+/* @media screen  and (max-width: 374px){
+  #loginForm{
+    width: 90% !important;
+    font-size: 14px;
+  }
+}
+@media screen  and (min-width:375px) and (max-width:765px){
+  #loginForm{
+    width: 80% !important;
+    font-size: 14px;
+  }
+} */
 
 .loginFormCSS, .signupFormCSS {
   border: 1px solid rgb(215, 212, 212);
@@ -346,10 +373,6 @@ background-color: rgb(206, 206, 201);
   display: inline-block;
   border-radius: 15px;
 }
-
-/* .topTrendingImages {
-  border-radius: 10px;
-} */
 
 @media screen and (min-width:1024px){
   #myImgText{
